@@ -1,11 +1,34 @@
-import React from "react";
+import React, { useRef, useEffect } from 'react'
 import "./index.css";
 import { MaterialSymbolsArrowDownward, MdiGithub } from "../../components/Symbols";
 
 function DarkTheme() {
+    const ref = useRef();
+    useEffect(() => {
+        const lineLeft = document.querySelectorAll("#section-lines");
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                entry.target.classList.toggle("show", entry.isIntersecting)
+                //creates a rule that once animation has played, it wont play again if you scroll up and down
+                if (entry.isIntersecting) observer.unobserve(entry.target)
+            })
+        },
+            {
+                //rule regarding percentage of item on screen
+                threshold: 0,
+                //rule giving border margin to start animation
+                rootMargin: "-1px"
+            }
+        );
+
+        lineLeft.forEach(card => {
+            observer.observe(card)
+        });
+    }, [ref]);
+
     return (
         <div className="dark-theme">
-            <section class="section-full section-title">
+            <section className="section-full section-title">
                 <nav>
                     <ul>
                         <li><a href="#about-section">About</a></li>
@@ -13,23 +36,23 @@ function DarkTheme() {
                         <li><a href="#contact-section">Contact</a></li>
                     </ul>
                 </nav>
-                <div class="titles">
-                    <div class="title-block-1">
-                        <h1 class="first-name">Jonathan</h1>
-                        <h1 class="last-name">-------Prill</h1>
+                <div className="titles">
+                    <div className="title-block-1">
+                        <h1 className="first-name">Jonathan</h1>
+                        <h1 className="last-name">-------Prill</h1>
                     </div>
-                    <div class="title-block-2">
-                        <h1 class="first-name">WEB--------</h1>
-                        <h1 class="last-name">DEVELOPER</h1>
+                    <div className="title-block-2">
+                        <h1 className="first-name">WEB--------</h1>
+                        <h1 className="last-name">DEVELOPER</h1>
                     </div>
                 </div>
             </section>
 
-            <hr class="section-line-right" id="section-lines" />
+            <hr className="section-line-right" id="section-lines" />
 
-            <section id="about-section" class="section-bio">
+            <section id="about-section" className="section-bio">
 
-                <div class="text-zone">
+                <div className="text-zone">
                     <h2>About Me</h2>
                     <p>
                         Being a mechanical engineer for about a decade I realized most of my enjoyment came from working with software.
@@ -41,79 +64,132 @@ function DarkTheme() {
                         the art of coding. I look forward to turning this passion into a profession.
                     </p>
                 </div>
-                <section class="resume">
+                <section className="resume">
                     <a href='Jonathan-Prill-Resume.pdf' download='Jonathan Prill Resume' target="_blank">Download Resume</a>
                 </section>
-                <section class="skills">
-                    <div class="skills-icons html-icon">
-                     
+                <section className="skills">
+                    <div className="skills-icons html-icon">
+
                     </div>
-            
-                
-               
-                  
+
+
+
+
                 </section>
 
 
-                <div class="scroll-down">
+                <div className="scroll-down">
                     <span>Scroll Down</span>
                     <MaterialSymbolsArrowDownward />
-                    
+
                 </div>
             </section>
 
-            <hr class="section-line-left" id="section-lines" />
+            <hr className="section-line-left" id="section-lines" />
 
-            <section id="project-section" class="section-project">
-                <div class="project-articles">
-                    <article class="project-article" style={{borderTopColor:"#FD2155"}}>
-                        <div class="project-content">
-                            <div class="post-data" style={{color:"#FD2155"}}>MERN &amp; GraphQL</div>
-                            <a href="https://github.com/DevJonTaylor/code-vegeta"><MdiGithub style={{paddingTop:"12px"}}/></a>
-                            <a href="https://code-vegeta.herokuapp.com/">
-                                <h5 class="post-title">Vegeta</h5>
+            <section id="project-section" className="section-project">
+                <div className="project-articles">
+                    <article className="project-article" style={{ borderTopColor: "#FD2155" }}>
+                        <div className="project-content">
+                            <div className="post-data" style={{ color: "#FD2155" }}>MERN &amp; GraphQL</div>
+                            <a target="_blank" rel="noreferrer" href="https://github.com/DevJonTaylor/code-vegeta"><MdiGithub style={{ paddingTop: "12px" }} /></a>
+                            <a target="_blank" rel="noreferrer" href="https://code-vegeta.herokuapp.com/">
+                                <h5 className="post-title">Vegeta</h5>
                             </a>
-                            <div class="post-desc">Build your online presence.</div>
+                            <div className="post-desc">Improve your online presence with this website builder.</div>
                         </div>
                     </article>
-                
-              
-                 
-                  
-                
-            
-
+                    <article className="project-article" style={{ borderTopColor: "orange" }}>
+                        <div className="project-content">
+                            <div className="post-data" style={{ color: "orange" }}>APIs &amp; mySQL</div>
+                            <a target="_blank" rel="noreferrer" href="https://github.com/jonathanprill/spray-can-project-2"><MdiGithub style={{ paddingTop: "12px" }} /></a>
+                            <a target="_blank" rel="noreferrer" href="https://enigmatic-cliffs-72783.herokuapp.com/">
+                                <h5 className="post-title">Spray Can</h5>
+                            </a>
+                            <div className="post-desc">For those that want to discover new street art.</div>
+                        </div>
+                    </article>
+                    <article className="project-article" style={{ borderTopColor: "#E4EE89" }}>
+                        <div className="project-content">
+                            <div className="post-data" style={{ color: "#E4EE89" }}>APIs &amp; JS</div>
+                            <a target="_blank" rel="noreferrer" href="https://github.com/jowstafford/ChessMaster"><MdiGithub style={{ paddingTop: "12px" }} /></a>
+                            <a target="_blank" rel="noreferrer" href="https://jowstafford.github.io/ChessMaster/">
+                                <h5 className="post-title">Chess Master</h5>
+                            </a>
+                            <div className="post-desc">For chess players that want to take their game to the next level.</div>
+                        </div>
+                    </article>
+                    <article className="project-article" style={{ borderTopColor: "#81D8F7" }}>
+                        <div className="project-content">
+                            <div className="post-data" style={{ color: "#81D8F7" }}>MERN</div>
+                            <a target="_blank" rel="noreferrer" href="https://github.com/jonathanprill/deep-thoughts"><MdiGithub style={{ paddingTop: "12px" }} /></a>
+                            <a target="_blank" rel="noreferrer" href="https://mysterious-ocean-45457.herokuapp.com/">
+                                <h5 className="post-title">Deep Thoughts</h5>
+                            </a>
+                            <div className="post-desc">Social media platform built using the MERN stack.</div>
+                        </div>
+                    </article>
+                    <article className="project-article" style={{ borderTopColor: "#FD2155" }}>
+                        <div className="project-content">
+                            <div className="post-data" style={{ color: "#FD2155" }}>Local Storage</div>
+                            <a target="_blank" rel="noreferrer" href="https://github.com/jonathanprill/taskmaster-pro"><MdiGithub style={{ paddingTop: "12px" }} /></a>
+                            <a target="_blank" rel="noreferrer" href="https://jonathanprill.github.io/taskmaster-pro/">
+                                <h5 className="post-title">Taskmaster Pro</h5>
+                            </a>
+                            <div className="post-desc">To-do app inspired by Asana.</div>
+                        </div>
+                    </article>
+                    <article className="project-article" style={{ borderTopColor: "#81D8F7" }}>
+                        <div className="project-content">
+                            <div className="post-data" style={{ color: "#81D8F7" }}>mySQL &amp; Node</div>
+                            <a target="_blank" rel="noreferrer" href="https://github.com/jonathanprill/hacker-forum"><MdiGithub style={{ paddingTop: "12px" }} /></a>
+                            <a target="_blank" rel="noreferrer" href="https://nameless-sands-05757.herokuapp.com/">
+                                <h5 className="post-title">Hacker Forum</h5>
+                            </a>
+                            <div className="post-desc">Town square for developers inspired by Reddit.</div>
+                        </div>
+                    </article>
+                    <article className="project-article" style={{ borderTopColor: "orange" }}>
+                        <div className="project-content">
+                            <div className="post-data" style={{ color: "orange" }}>HTML &amp; CSS</div>
+                            <a target="_blank" rel="noreferrer" href="https://github.com/jonathanprill/run-buddy"><MdiGithub style={{ paddingTop: "12px" }} /></a>
+                            <a target="_blank" rel="noreferrer" href="https://jonathanprill.github.io/run-buddy/">
+                                <h5 className="post-title">Run Buddy</h5>
+                            </a>
+                            <div className="post-desc"> Polished landing page for growing company.</div>
+                        </div>
+                    </article>
                 </div>
             </section>
 
-            <hr class="section-line-right" id="section-lines" />
+            <hr className="section-line-right" id="section-lines" />
 
-            <section id="contact-section" class="section-contact">
+            <section id="contact-section" className="section-contact">
 
 
 
-                <div class="text-zone">
+                <div className="text-zone">
                     <h2>Contact Me</h2>
                     <p>
                         I am currently looking for opportunities ranging from freelance to full time employment.
                         Please reach out if you're looking for a hard working web developer or if have any questions.
                         See my social links below or email me at <a href="mailto:jonathantprill@gmail.com"
-                            class="email-text">jonathantprill@gmail.com.</a>
+                            className="email-text">jonathantprill@gmail.com.</a>
                     </p>
-                    <section class="contact-photo">
-                       
+                    <section className="contact-photo">
+
                     </section>
                 </div>
-                <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/jonathan-prill-49423672/" class="fa fa-linkedin"> </a>
-                    <a href="https://github.com/jonathanprill"><i class="fa fa-github"
-                        style={{fontSize: "32px"}}></i></a>
-                    <a href="mailto:jonathantprill@gmail.com" class="fa fa-google"> </a>
+                <div className="social-icons">
+                    <a href="https://www.linkedin.com/in/jonathan-prill-49423672/" className="fa fa-linkedin"> </a>
+                    <a href="https://github.com/jonathanprill"><i className="fa fa-github"
+                        style={{ fontSize: "32px" }}></i></a>
+                    <a href="mailto:jonathantprill@gmail.com" className="fa fa-google"> </a>
                 </div>
 
             </section>
 
-            <hr class="section-line-left" id="section-lines" />
+            <hr className="section-line-left" id="section-lines" />
 
             <footer>
                 <p>
