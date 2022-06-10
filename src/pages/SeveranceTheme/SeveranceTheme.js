@@ -1,9 +1,9 @@
 import React from "react";
 
-function Severance() {
+function SeveranceTheme() {
     return (
         <h1>Severance Theme</h1>
     )
 }
 
-export default Severance;
+export default SeveranceTheme;

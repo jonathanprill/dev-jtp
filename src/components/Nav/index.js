@@ -1,11 +1,15 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 function Nav() {
     return (
         <div>
-            <h1>
-                Nav bar
-            </h1>
+             <Link to="/">
+              HOME
+            </Link>
+            <Link to="/retroTheme">
+              Retro
+            </Link>
         </div>
     )
 }

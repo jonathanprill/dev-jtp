@@ -1,9 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Nav from './components/Nav';
-import Severance from './pages/Severance';
-import DarkTheme from './pages/DarkTheme';
-import RetroTheme from './pages/RetroTheme';
-
+import SeveranceTheme from './pages/SeveranceTheme/SeveranceTheme';
+import DarkTheme from './pages/DarkTheme/DarkTheme';
+import RetroTheme from './pages/RetroTheme/RetroTheme';
 function App() {
   return (
 
@@ -19,8 +18,8 @@ function App() {
           element={<RetroTheme />}
         />
         <Route
-          path="/severance"
-          element={<Severance />}
+          path="/severanceTheme"
+          element={<SeveranceTheme />}
         />
       </Routes>
     </BrowserRouter>
