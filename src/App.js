@@ -3,6 +3,8 @@ import Nav from './components/Nav';
 import SeveranceTheme from './pages/SeveranceTheme/SeveranceTheme';
 import DarkTheme from './pages/DarkTheme/DarkTheme';
 import RetroTheme from './pages/RetroTheme/RetroTheme';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+
 function App() {
   
   return (
