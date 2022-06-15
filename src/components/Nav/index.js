@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 import SpeedDial from '@mui/material/SpeedDial';
 import SpeedDialIcon from '@mui/material/SpeedDialIcon';
 import SpeedDialAction from '@mui/material/SpeedDialAction';
-import { UilTvRetro, MdiGithub } from "../../components/Symbols";
+import { WpfRetroTv, MaterialSymbolsDarkMode, MdiThemeLightDark } from "../../components/Symbols";
 
 
 
@@ -28,25 +28,25 @@ const Nav = () => {
         <Link to="/">
           HOME
         </Link>
-        <Link to="/retroTheme">
+        <Link to="/retro-theme">
           Retro
         </Link>
         <Box sx={{ height: 200, transform: 'translateZ(0px)', flexGrow: 1 }}>
           <SpeedDial
             ariaLabel="SpeedDial basic example"
-            sx={{ position: 'absolute', bottom: -90, right: 16 }}
-            icon={<SpeedDialIcon />}
+            sx={{ width: 200, position: 'absolute', bottom: -90, right: 16 }}
+            icon={<MdiThemeLightDark />}
           >
          
               <SpeedDialAction
-                icon={<MdiGithub/>}
-                tooltipTitle='Home'
+                icon={<MaterialSymbolsDarkMode/>}
+                tooltipTitle='Dark Theme'
                 href='/'
               />
               <SpeedDialAction
-                icon={<UilTvRetro/>}
-                tooltipTitle='RetroTheme'
-                href='/retroTheme'
+                icon={<WpfRetroTv/>}
+                tooltipTitle='Retro Theme'
+                href='/retro-theme'
               />
         
           </SpeedDial>

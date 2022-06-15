@@ -17,7 +17,7 @@ function App() {
           element={<DarkTheme />}
         />
         <Route
-          path="/retroTheme"
+          path="/retro-theme"
           element={<RetroTheme />}
         />
         <Route
