@@ -484,13 +484,14 @@
     transform: translateX(99%);
     transition: 1s;
     margin: 0;
-
+    background-color: var(--primary-color);
 }
 
 .dT-section-line-left {
     transform: translateX(-99%);
     transition: 1s;
     margin: 0;
+    background-color: var(--primary-color);
 }
 
 .dT-section-line-right.show,

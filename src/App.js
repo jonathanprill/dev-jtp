@@ -21,7 +21,7 @@ function App() {
           element={<RetroTheme />}
         />
         <Route
-          path="/severanceTheme"
+          path="/severance-theme"
           element={<SeveranceTheme />}
         />
       </Routes>

@@ -2,7 +2,7 @@ import React from "react";
 import Box from '@mui/material/Box';
 import SpeedDial from '@mui/material/SpeedDial';
 import SpeedDialAction from '@mui/material/SpeedDialAction';
-import { WpfRetroTv, MaterialSymbolsDarkMode, MdiThemeLightDark } from "../../components/Symbols";
+import { WpfRetroTv, MaterialSymbolsDarkMode, MdiThemeLightDark, CiApple } from "../../components/Symbols";
 
 
 
@@ -25,7 +25,7 @@ const Nav = () => {
         <Box sx={{ height: 0, transform: 'translateZ(0px)', flexGrow: 1 }}>
           <SpeedDial
             ariaLabel="SpeedDial basic example"
-            sx={{ width: 200, position: 'absolute', top: 30, left: 26 }}
+            sx={{ width: 300, position: 'absolute', top: 30, left: 26 }}
             icon={<MdiThemeLightDark />}
             direction='right'
           >
@@ -40,6 +40,11 @@ const Nav = () => {
                 tooltipTitle='Retro Theme'
                 href='/retro-theme'
               />
+              <SpeedDialAction
+                icon={<CiApple/>}
+                tooltipTitle='Severance Theme'
+                href='/severance-theme'
+              />
         
           </SpeedDial>
         </Box>
@@ -47,7 +52,7 @@ const Nav = () => {
     );
   }
   return (
-    <div className="nav-container">
+    <div>
 
     </div>
   );
