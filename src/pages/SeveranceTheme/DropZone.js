@@ -1,19 +1,30 @@
 import React, { Component } from 'react';
 import "./severanceTheme.css";
+import $ from 'jquery';
+import { MdiChessPawn, RunRounded, Vegeta, MdiSpray, ThoughtBubble, MaterialSymbolsAddTask, MaterialSymbolsCode, FluentPizza, RainShowers } from "../../components/Symbols";
+
 
 export default class ToDoDragDropDemo extends Component {
 
     state = {
         tasks: [
-            { id: "1", projectName: "Spray Can", type: "restingPosition", projectURL: "red" },
-            { id: "2", projectName: "Chess Master", type: "restingPosition", projectURL: "green" },
-            { id: "3", projectName: "Run Buddy", type: "restingPosition", projectURL: "https://jonathanprill.github.io/run-buddy/" },
-            { id: "4", projectName: "Weather", type: "Done", projectURL: "green" }
+            { icon: <MdiSpray />, projectName: "Spray Can", type: "restingPosition", projectURL: "https://enigmatic-cliffs-72783.herokuapp.com/" },
+            { icon: <Vegeta />, projectName: "Vegeta", type: "restingPosition", projectURL: "https://code-vegeta.herokuapp.com/" },
+            { icon: <MdiChessPawn />, projectName: "Chess Master", type: "restingPosition", projectURL: "https://jowstafford.github.io/ChessMaster/" },
+            { icon: <RunRounded />, projectName: "Run Buddy", type: "restingPosition", projectURL: "https://jonathanprill.github.io/run-buddy/" },
+            { icon: <ThoughtBubble />, projectName: "Deep Thoughts", type: "restingPosition", projectURL: "https://mysterious-ocean-45457.herokuapp.com/" },
+            { icon: <MaterialSymbolsAddTask />, projectName: "Task Master", type: "restingPosition", projectURL: "https://jonathanprill.github.io/taskmaster-pro/" },
+            { icon: <MaterialSymbolsCode />, projectName: "Hacker Forum", type: "restingPosition", projectURL: "https://nameless-sands-05757.herokuapp.com/" },
+            { icon: <RainShowers />, projectName: "Weather", type: "restingPosition", projectURL: "https://jonathanprill.github.io/weather-dashboard/" },
+            { icon: <FluentPizza />, projectName: "Food Festival", type: "restingPosition", projectURL: "https://jonathanprill.github.io/food-festival/" },
         ]
     }
 
     onDragStart = (event, projectName) => {
-        // console.log('dragstart on div: ', projectName);
+        $(".sev-left-door").addClass("sev-left-door-active")
+        $(".sev-right-door").addClass("sev-right-door-active")
+        $(".sev-bottom-trash").addClass("sev-bottom-trash-drag")
+        console.log('dragstart on div: ', projectName);
         event.dataTransfer.setData("projectName", projectName);
     }
     onDragOver = (event) => {
@@ -22,7 +33,9 @@ export default class ToDoDragDropDemo extends Component {
 
     onDrop = (event, cat) => {
         let projectName = event.dataTransfer.getData("projectName");
-        // console.log(projectName)
+        $(".sev-bottom-trash").removeClass("sev-bottom-trash-drag")
+        $(".sev-left-door").removeClass("sev-left-door-active")
+        $(".sev-right-door").removeClass("sev-right-door-active")
         let tasks = this.state.tasks.filter((task) => {
             if (task.projectName === projectName) {
                 task.type = cat;
@@ -37,6 +50,9 @@ export default class ToDoDragDropDemo extends Component {
     }
     onTrashDrop = (event, cat) => {
         let projectName = event.dataTransfer.getData("projectName");
+        $(".sev-bottom-trash").removeClass("sev-bottom-trash-drag")
+        $(".sev-left-door").removeClass("sev-left-door-active")
+        $(".sev-right-door").removeClass("sev-right-door-active")
         window.open(projectName)
         let tasks = this.state.tasks.filter((task) => {
             if (task.projectName === projectName) {
@@ -53,34 +69,48 @@ export default class ToDoDragDropDemo extends Component {
     render() {
         var tasks = {
             restingPosition: [],
-            Done: []
+            Trash: []
         }
 
         this.state.tasks.forEach((task) => {
             tasks[task.type].push(
-                <div key={task.id}
+                <div key={task.icon}
                     onDragStart={(event) => this.onDragStart(event, task.projectURL)}
                     draggable
                     className="draggable">
-                    {task.projectName}
+                    <span className='sev-project-header'>{task.projectName}</span>
+                    {task.icon}
                 </div>
             );
         });
 
         return (
             <div className="drag-container">
-
-                <div className="restingPosition"
+                <h2 className='drag-header'>SORT THE BOXES INTO THEIR APPROPRIATE BINS</h2>
+                <div className="resting-position"
                     onDragOver={(event) => this.onDragOver(event)}
                     onDrop={(event) => { this.onDrop(event, "restingPosition") }}>
-                    <span className="group-header">In Progress</span>
                     {tasks.restingPosition}
                 </div>
-                <div className="droppable"
+                <div className="drop-zone"
                     onDragOver={(event) => this.onDragOver(event)}
-                    onDrop={(event) => this.onTrashDrop(event, "Done")}>
-                    <span className="group-header">Done</span>
-                    {tasks.Done}
+                    onDrop={(event) => this.onTrashDrop(event, "Trash")}>
+
+                    <div className='trash-section'>
+                        <div class="sev-bottom-trash">
+                            <div className="sev-left-door"></div>1
+                            <div className="sev-right-door"></div>
+                        </div>
+                        <div class="sev-bottom-trash">
+                            <div className="sev-left-door"></div>2
+                            <div className="sev-right-door"></div>
+                        </div>
+                        <div class="sev-bottom-trash">
+                            <div className="sev-left-door"></div>3
+                            <div className="sev-right-door"></div>
+                        </div>
+                    </div>
+
                 </div>
 
             </div>
