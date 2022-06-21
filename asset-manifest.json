@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/dev-jtp/static/css/main.12d56d5f.css",
+    "main.js": "/dev-jtp/static/js/main.f9383d49.js",
+    "static/js/787.c1d56217.chunk.js": "/dev-jtp/static/js/787.c1d56217.chunk.js",
+    "static/media/react-about-gif.gif": "/dev-jtp/static/media/react-about-gif.da88ea7177fa40d931fc.gif",
+    "static/media/react-skills-gif.gif": "/dev-jtp/static/media/react-skills-gif.a0b375e57c28e0392435.gif",
+    "static/media/react-contact-gif.gif": "/dev-jtp/static/media/react-contact-gif.601d9f9a8a0e006bf17b.gif",
+    "static/media/react-projects-gif.gif": "/dev-jtp/static/media/react-projects-gif.3eea73826bde5cb76ce1.gif",
+    "static/media/static.gif": "/dev-jtp/static/media/static.8603acf6fbe1b6c9270d.gif",
+    "static/media/spray-can-card.png": "/dev-jtp/static/media/spray-can-card.085bce076c60a0686b81.png",
+    "static/media/chessmaster-card4.png": "/dev-jtp/static/media/chessmaster-card4.e6f0a094d5465a04d953.png",
+    "static/media/deep-thoughts-card.png": "/dev-jtp/static/media/deep-thoughts-card.672edafb90a094a57e82.png",
+    "static/media/tv.png": "/dev-jtp/static/media/tv.d4441a379a6e132090cc.png",
+    "static/media/hack-forum-card.gif": "/dev-jtp/static/media/hack-forum-card.f29730a859083406d04b.gif",
+    "static/media/weather-card.png": "/dev-jtp/static/media/weather-card.99f680c166f946c832e6.png",
+    "static/media/IMG-3707.jpg": "/dev-jtp/static/media/IMG-3707.edaecd349d1a4de05224.jpg",
+    "static/media/taskmaster-card.png": "/dev-jtp/static/media/taskmaster-card.589a8a465e224a2ea1d7.png",
+    "static/media/graphics-moon_full.png": "/dev-jtp/static/media/graphics-moon_full.cc448c22c2d33f305edf.png",
+    "static/media/mount-grid@1x.png": "/dev-jtp/static/media/mount-grid@1x.936855fc6f553d78c9c4.png",
+    "static/media/bg-grid-footer_1x.png": "/dev-jtp/static/media/bg-grid-footer_1x.cf74900a92f6f8bbab81.png",
+    "index.html": "/dev-jtp/index.html",
+    "main.12d56d5f.css.map": "/dev-jtp/static/css/main.12d56d5f.css.map",
+    "main.f9383d49.js.map": "/dev-jtp/static/js/main.f9383d49.js.map",
+    "787.c1d56217.chunk.js.map": "/dev-jtp/static/js/787.c1d56217.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.12d56d5f.css",
+    "static/js/main.f9383d49.js"
+  ]
+}
