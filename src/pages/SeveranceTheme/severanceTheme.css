@@ -563,11 +563,10 @@ ul {
 .resting-position {
     width: 80vw;
     height: 340px;
-    border: 3px solid black;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: -120px;
+    margin-top: 60px;
 }
 
 .draggable {
@@ -592,4 +591,18 @@ ul {
     display: flex;
     justify-content: space-evenly;
 
+}
+
+.sev-project-title-line {
+    border-right: 5px solid white;
+    left: 0px;
+    top: 10px;
+    line-height: 0;
+    font-size: 1.75rem;
+    padding: 0;
+    position: absolute;
+    overflow: hidden;
+    color: white;
+    font-family: 'Aldrich', sans-serif;
+    animation: showLine 1s forwards;
 }

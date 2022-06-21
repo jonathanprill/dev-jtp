@@ -86,7 +86,11 @@ export default class ToDoDragDropDemo extends Component {
 
         return (
             <div className="drag-container">
-                <h2 className='drag-header'>SORT THE BOXES INTO THEIR APPROPRIATE BINS</h2>
+                <div id="toggle-me-contact-line" class="sev-project-title-line">
+                    <div id="toggle-me-contact-text" class="sev-title-text">
+                        <span>Projects</span>
+                    </div>
+                </div>
                 <div className="resting-position"
                     onDragOver={(event) => this.onDragOver(event)}
                     onDrop={(event) => { this.onDrop(event, "restingPosition") }}>
@@ -101,7 +105,7 @@ export default class ToDoDragDropDemo extends Component {
                             <div className="sev-left-door"></div>1
                             <div className="sev-right-door"></div>
                         </div>
-                        <div class="sev-bottom-trash">
+                        <div className="sev-bottom-trash">
                             <div className="sev-left-door"></div>2
                             <div className="sev-right-door"></div>
                         </div>
