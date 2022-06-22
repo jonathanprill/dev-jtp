@@ -759,6 +759,9 @@ label {
 .spray-can {
     background: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%), url("./assets/spray-can-card.png");
 }
+.vegeta {
+    background: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%), url("./assets/vegeta-gif7.gif");
+}
 
 .chessmaster {
     background: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%), url("./assets/chessmaster-card4.png");
@@ -808,7 +811,7 @@ label {
 }
 
 .card-text p {
-    color: grey;
+    color: #a7a7a7;
     font-size: 16px;
     font-weight: 300;
 }

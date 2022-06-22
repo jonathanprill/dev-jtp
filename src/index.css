@@ -20,3 +20,16 @@ code {
   position: absolute;
   z-index: 10000;
 }
+
+.css-118zhtq-MuiButtonBase-root-MuiFab-root-MuiSpeedDial-fab {
+  width: 100px !important;
+  font-size: 18px !important;
+  font-family: 'Bebas Neue', cursive !important;
+  color: #863412 !important;
+  background-color: #FEF8CA !important;
+}
+
+.MuiFab-circular {
+  box-shadow: rgb(224,199,64) 0px 0px 0px 3px, rgb(224,165,64) 0px 0px 0px 6px, rgb(213,129,53) 0px 0px 0px 9px, rgb(169,89,39) 0px 0px 0px 12px, rgb(99,59,40) 0px 0px 0px 15px  !important;
+}
+

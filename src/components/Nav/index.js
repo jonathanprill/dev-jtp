@@ -26,7 +26,7 @@ const Nav = () => {
           <SpeedDial
             ariaLabel="SpeedDial basic example"
             sx={{ width: 300, position: 'absolute', top: 30, left: 26 }}
-            icon={<MdiThemeLightDark />}
+            icon='Choose Theme'
             direction='right'
           >
          
