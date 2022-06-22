@@ -13,7 +13,7 @@ function App() {
       <Nav />
       <Routes>
         <Route
-          path="/"
+          path="/dev-jtp/"
           element={<DarkTheme />}
         />
         <Route
