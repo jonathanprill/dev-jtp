@@ -17,11 +17,11 @@ function App() {
           element={<DarkTheme />}
         />
         <Route
-          path="/retro-theme"
+          path="/dev-jtp/retro-theme"
           element={<RetroTheme />}
         />
         <Route
-          path="/severance-theme"
+          path="/dev-jtp/severance-theme"
           element={<SeveranceTheme />}
         />
       </Routes>
