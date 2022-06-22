@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/dev-jtp/static/css/main.12d56d5f.css",
-    "main.js": "/dev-jtp/static/js/main.cea605cc.js",
+    "main.js": "/dev-jtp/static/js/main.c72b976a.js",
     "static/js/787.c1d56217.chunk.js": "/dev-jtp/static/js/787.c1d56217.chunk.js",
     "static/media/react-about-gif.gif": "/dev-jtp/static/media/react-about-gif.da88ea7177fa40d931fc.gif",
     "static/media/react-skills-gif.gif": "/dev-jtp/static/media/react-skills-gif.a0b375e57c28e0392435.gif",
@@ -21,11 +21,11 @@
     "static/media/bg-grid-footer_1x.png": "/dev-jtp/static/media/bg-grid-footer_1x.cf74900a92f6f8bbab81.png",
     "index.html": "/dev-jtp/index.html",
     "main.12d56d5f.css.map": "/dev-jtp/static/css/main.12d56d5f.css.map",
-    "main.cea605cc.js.map": "/dev-jtp/static/js/main.cea605cc.js.map",
+    "main.c72b976a.js.map": "/dev-jtp/static/js/main.c72b976a.js.map",
     "787.c1d56217.chunk.js.map": "/dev-jtp/static/js/787.c1d56217.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.12d56d5f.css",
-    "static/js/main.cea605cc.js"
+    "static/js/main.c72b976a.js"
   ]
 }
