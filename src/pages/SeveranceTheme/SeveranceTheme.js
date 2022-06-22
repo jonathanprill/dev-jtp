@@ -29,7 +29,7 @@ function SeveranceTheme() {
 
     };
     const handleSevPageChange = (page) => setCurrentPage(page);
-    // Nav
+    // Nav End
 
     const ref = useRef();
     useEffect(() => {
@@ -83,7 +83,7 @@ function SeveranceTheme() {
         }
     }, [ref]);
 
-    
+
 
     return (
 
@@ -116,7 +116,6 @@ function SeveranceTheme() {
 
                         <div id="toggle-me-div" className="sev-revealed-content">
 
-
                             {/* <!-- Navigation --> */}
                             <div className='sev-tabs is-centered'>
                                 <ul>
@@ -128,34 +127,14 @@ function SeveranceTheme() {
                                 </ul>
                             </div>
 
-
                             {/* <!-- Content --> */}
                             <div className="sev-page-content" id="tab-content">
-                                {/* <!-- Portfolio --> */}
                                 {renderSevPage()}
-                                {/* <!-- About --> */}
-
-                                {/* <!-- Skills --> */}
-
-                                {/* <!-- Contact --> */}
-
-                                {/* <Dropzone /> */}
                             </div>
-
-
-
-
-
-
                         </div>
-
-
                     </div>
                 </section>
-
             </div>
-
-
         </div>
     )
 }

@@ -88,7 +88,7 @@ export default class ToDoDragDropDemo extends Component {
             <div className="drag-container">
                 <div id="toggle-me-contact-line" class="sev-project-title-line">
                     <div id="toggle-me-contact-text" class="sev-title-text">
-                        <span>Projects</span>
+                        <span>Projects (Drag and Drop)</span>
                     </div>
                 </div>
                 <div className="resting-position"
