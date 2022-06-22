@@ -9,19 +9,19 @@ function App() {
   
   return (
 
-    <BrowserRouter>
+    <BrowserRouter basename="/dev-jtp" >
       <Nav />
       <Routes>
         <Route
-          path="/dev-jtp"
+          path="/"
           element={<DarkTheme />}
         />
         <Route
-          path="/dev-jtp/retro-theme/"
+          path="retro-theme/"
           element={<RetroTheme />}
         />
         <Route
-          path="/dev-jtp/severance-theme/"
+          path="severance-theme/"
           element={<SeveranceTheme />}
         />
       </Routes>
