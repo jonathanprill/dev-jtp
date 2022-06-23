@@ -2,7 +2,7 @@ import React from "react";
 import Box from '@mui/material/Box';
 import SpeedDial from '@mui/material/SpeedDial';
 import SpeedDialAction from '@mui/material/SpeedDialAction';
-import { WpfRetroTv, MaterialSymbolsDarkMode, MdiThemeLightDark, CiApple } from "../../components/Symbols";
+import { WpfRetroTv, MaterialSymbolsDarkMode, IcBaselineStarBorderPurple500, CiApple } from "../../components/Symbols";
 
 
 
@@ -26,7 +26,7 @@ const Nav = () => {
           <SpeedDial
             ariaLabel="SpeedDial basic example"
             sx={{ width: 300, position: 'absolute', top: 30, left: 26 }}
-            icon='Choose Theme'
+            icon={<IcBaselineStarBorderPurple500/>}
             direction='right'
           >
          
