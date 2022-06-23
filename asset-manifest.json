@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/dev-jtp/static/css/main.a394fc30.css",
-    "main.js": "/dev-jtp/static/js/main.c2eecf46.js",
+    "main.css": "/dev-jtp/static/css/main.5178e517.css",
+    "main.js": "/dev-jtp/static/js/main.8fbab24e.js",
     "static/js/787.c1d56217.chunk.js": "/dev-jtp/static/js/787.c1d56217.chunk.js",
     "static/media/vegeta-gif7.gif": "/dev-jtp/static/media/vegeta-gif7.2b21d55b197d604ab185.gif",
     "static/media/react-about-gif.gif": "/dev-jtp/static/media/react-about-gif.da88ea7177fa40d931fc.gif",
@@ -21,12 +21,12 @@
     "static/media/mount-grid@1x.png": "/dev-jtp/static/media/mount-grid@1x.936855fc6f553d78c9c4.png",
     "static/media/bg-grid-footer_1x.png": "/dev-jtp/static/media/bg-grid-footer_1x.cf74900a92f6f8bbab81.png",
     "index.html": "/dev-jtp/index.html",
-    "main.a394fc30.css.map": "/dev-jtp/static/css/main.a394fc30.css.map",
-    "main.c2eecf46.js.map": "/dev-jtp/static/js/main.c2eecf46.js.map",
+    "main.5178e517.css.map": "/dev-jtp/static/css/main.5178e517.css.map",
+    "main.8fbab24e.js.map": "/dev-jtp/static/js/main.8fbab24e.js.map",
     "787.c1d56217.chunk.js.map": "/dev-jtp/static/js/787.c1d56217.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a394fc30.css",
-    "static/js/main.c2eecf46.js"
+    "static/css/main.5178e517.css",
+    "static/js/main.8fbab24e.js"
   ]
 }
